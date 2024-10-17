@@ -1,0 +1,8 @@
+Adelaide Metro GTFS Release Notes
+
+General Amendments:
+
+1)	Implemented slight time adjustments for routes 977 and 961.
+2)	Fixed issues where route G20 was not showing it serviced Stop W1 Grote St between 2pm & 7pm Monday to Friday.
+3)	From Monday 21st October routes 251, 252, 253, 254 and N252 will detour away from a section of Hawker St in both directions. Buses will detour via Torrens Rd, Cheif St and Hawker St. Stop 10 Hawker St has become an alternative timepoint. Detour expected to last approx. 12 months.
+4)	GTFS feed validity has been extended to 11th April 2025.

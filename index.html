@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adelaide Metro Train Tracker</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* Main map styling */
+        #map { height: 600px; }
+
+        /* Notification and Active Train Container styling */
+        #controls-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            font-family: Arial, sans-serif;
+        }
+
+        .control-box {
+            margin-bottom: 15px;
+        }
+
+        .control-box label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .control-box input, .control-box select, .control-box button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .control-box button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .control-box button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Marker pop-up styling */
+        .popup-content {
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <!-- Controls container -->
+    <div id="controls-container">
+        <div class="control-box">
+            <label for="vehicleIdInput">Enter Train ID</label>
+            <input type="text" id="vehicleIdInput" placeholder="Train ID" />
+            <button id="searchButton">Notify Me</button>
+        </div>
+        <div class="control-box">
+            <label for="trainDropdown">Active Trains</label>
+            <select id="trainDropdown">
+                <option value="">Select Train</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Include Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Include protobuf.js -->
+    <script src="https://cdn.jsdelivr.net/npm/protobufjs/dist/protobuf.min.js"></script>
+    <!-- Link to the external script file -->
+    <script src="script.js"></script>
+</body>
+</html>
